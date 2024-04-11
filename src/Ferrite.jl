@@ -121,6 +121,9 @@ include("Export/VTK.jl")
 # Point Evaluation
 include("PointEvalHandler.jl")
 
+include("interface_elements/RefShapes.jl") # Should be at the top inc. type defs...
+include("interface_elements/InterfaceInterpolations.jl")
+
 # Other
 include("deprecations.jl")
 include("docs.jl")

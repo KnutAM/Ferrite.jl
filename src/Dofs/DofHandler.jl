@@ -399,6 +399,7 @@ function _close_subdofhandler!(dh::DofHandler{sdim}, sdh::SubDofHandler, sdh_ind
         begin
             next_dof_index = 1
             for vdofs ∈ vertexdof_indices(interpolation)
+                @show vdofs
                 for dof_index ∈ vdofs
                     @assert dof_index == next_dof_index "Vertex dof ordering not supported. Please consult the dev docs."
                     next_dof_index += 1
